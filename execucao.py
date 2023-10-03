@@ -2,18 +2,10 @@ from conta import Conta
 
 conta = Conta(123, "Thiago", 55.0, 1000.0)
 print("\n")
-conta2 = Conta(321, "Marco", 100.0, 1000.0)
 
-valor = 10.0
+print(conta.get_limite())
+print(conta.get_saldo())
+print(conta.get_titular())
 
-conta2.saca(valor)
-conta.deposita(valor)
-
-print("\n")
-
-conta.extrato()
-conta2.extrato()
-
-conta.transfere(10, conta2)
-conta.extrato()
-conta2.extrato()
+conta.set_limite(10000)
+print(conta.get_limite())
