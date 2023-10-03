@@ -1,11 +1,13 @@
 from conta import Conta
+from cliente import Cliente
 
 conta = Conta(123, "Thiago", 55.0, 1000.0)
+conta.limite = 20000
+print(conta.limite)
 print("\n")
 
-print(conta.get_limite())
-print(conta.get_saldo())
-print(conta.get_titular())
+cliente = Cliente("thiago")
+print(cliente.nome)
 
-conta.set_limite(10000)
-print(conta.get_limite())
+cliente.nome = "duda"
+print(cliente.nome)
