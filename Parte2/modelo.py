@@ -46,6 +46,9 @@ class Playlist:
         self.nome = nome
         self._programas = programas
 
+    def __getitem__(self, item): # Com isso permitimos que a lista seja iterável
+        return self._programas[item]
+
     @property
     def listagem(self):
         return self._programas
@@ -72,5 +75,9 @@ atlanta.dar_like()
 filmes_e_series = [vingadores, atlanta, demolidor, tmep]
 playlist_fim_de_semana = Playlist('fim de semana', filmes_e_series)
 
-for programa in playlist_fim_de_semana.listagem:
+print(f'Tamanho do playlist: {len(playlist_fim_de_semana.listagem)}')
+print(vingadores in playlist_fim_de_semana)
+print(playlist_fim_de_semana[0])
+for programa in playlist_fim_de_semana:
     print(programa)
+
